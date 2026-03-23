@@ -1,11 +1,19 @@
-import { Leaf, FileText, Truck, ClipboardCheck, Recycle } from "lucide-react";
+import { Leaf, FileText, Truck, ClipboardCheck, Recycle, Euro, Car, Bike } from "lucide-react";
 import cartelImg from "@/assets/cartel-abandonado.png";
 
 const steps = [
   { icon: FileText, step: "01", title: "Envía foto y matrícula", desc: "Foto del vehículo y número de matrícula por nuestro chat o formulario." },
-  { icon: ClipboardCheck, step: "02", title: "Gestión documental", desc: "Nos encargamos de la baja definitiva en la DGT y toda la documentación legal." },
+  { icon: ClipboardCheck, step: "02", title: "Gestión documental", desc: "Tramitamos la descontaminación y baja definitiva en la DGT. Recibirás la baja en PDF en tu móvil." },
   { icon: Truck, step: "03", title: "Recogida gratuita", desc: "Programamos la grúa para recoger el vehículo en la dirección indicada." },
   { icon: Recycle, step: "04", title: "Traslado al CAT", desc: "El vehículo se traslada al Centro Autorizado de Tratamiento para su descontaminación." },
+];
+
+const vehicleTypes = [
+  "Turismos",
+  "Furgones",
+  "Ciclomotores",
+  "Motocicletas",
+  "Maquinaria industrial",
 ];
 
 const DesguaceSection = () => {
@@ -32,15 +40,41 @@ const DesguaceSection = () => {
           {/* Right - Content */}
           <div>
             <p className="font-body text-sm tracking-[0.3em] uppercase text-eco font-medium mb-2">
-              Nuevo servicio
+              Recogida y baja definitiva
             </p>
             <h2 className="font-display text-4xl md:text-5xl text-foreground mb-6">
-              Retirada de vehículos abandonados
+              Retirada de vehículos y baja definitiva
             </h2>
-            <p className="font-body text-muted-foreground leading-relaxed mb-8">
-              ¿Tienes un coche abandonado en un solar, garaje o vía pública? Nos encargamos de todo: gestión de la baja definitiva en la DGT, retirada con grúa y traslado al Centro Autorizado de Tratamiento (CAT).{" "}
-              <strong className="text-foreground">Servicio completamente gratuito</strong> para el propietario del vehículo en Granada y alrededores.
+            <p className="font-body text-muted-foreground leading-relaxed mb-6">
+              ¿Tienes un vehículo viejo, abandonado o fuera de uso? Nos encargamos de todo: recogemos el vehículo, tramitamos la descontaminación y la baja definitiva en la DGT, y te hacemos llegar la baja en <strong className="text-foreground">PDF directamente a tu número de móvil</strong>.
             </p>
+
+            {/* Vehicle types */}
+            <div className="bg-card rounded-xl p-5 border border-border mb-6">
+              <p className="font-body font-semibold text-foreground mb-3">Tipos de vehículos que recogemos</p>
+              <div className="flex flex-wrap gap-2">
+                {vehicleTypes.map((type) => (
+                  <span key={type} className="bg-secondary text-secondary-foreground px-3 py-1 rounded-full font-body text-sm">
+                    {type}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Pago por vehículos */}
+            <div className="bg-eco/10 rounded-xl p-5 border border-eco/30 mb-8">
+              <div className="flex items-start gap-3">
+                <div className="gradient-eco w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Euro className="w-5 h-5 text-eco-foreground" />
+                </div>
+                <div>
+                  <p className="font-body font-semibold text-foreground mb-1">¿Tu vehículo tiene menos de 15 años?</p>
+                  <p className="font-body text-muted-foreground text-sm">
+                    Pagamos <strong className="text-eco text-lg">hasta 300€</strong> por vehículos con menos de 15 años de antigüedad.
+                  </p>
+                </div>
+              </div>
+            </div>
 
             {/* Documentación */}
             <div className="bg-card rounded-xl p-5 border border-border mb-8">

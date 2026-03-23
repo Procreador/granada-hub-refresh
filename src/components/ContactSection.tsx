@@ -40,7 +40,8 @@ const ContactSection = () => {
               </div>
               <div>
                 <p className="font-body text-sm text-muted-foreground">Email</p>
-                <p className="font-body text-lg text-foreground">info@gironaassistance.es</p>
+                <p className="font-body text-lg text-foreground">info@gruasgirona.com</p>
+                <p className="font-body text-lg text-foreground">contacto@gruasgirona.com</p>
               </div>
             </div>
 
