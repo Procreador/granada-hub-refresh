@@ -13,7 +13,15 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        display: ['Bebas Neue', 'sans-serif'],
+        body: ['Barlow', 'sans-serif'],
+      },
       colors: {
+        eco: {
+          DEFAULT: "hsl(80 70% 45%)",
+          foreground: "hsl(220 20% 8%)",
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
