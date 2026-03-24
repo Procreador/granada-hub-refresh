@@ -1,3 +1,5 @@
+import directorImg from '../assets/director.png';
+
 const AboutSection = () => {
   return (
     <section id="nosotros" className="py-24 bg-card">
@@ -13,7 +15,7 @@ const AboutSection = () => {
         <div className="flex flex-col md:flex-row items-center gap-12 text-left">
           <div className="w-48 h-48 md:w-64 md:h-64 flex-shrink-0 mx-auto md:mx-0">
             <img 
-              src="/director.jpg" 
+              src={directorImg} 
               alt="Juan Miguel Girona - Director General" 
               className="w-full h-full object-cover rounded-2xl shadow-2xl transition-all duration-500"
             />

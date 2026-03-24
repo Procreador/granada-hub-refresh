@@ -1,5 +1,7 @@
 import { Leaf, FileText, Truck, ClipboardCheck, Recycle, Euro, Car, Bike } from "lucide-react";
 import cartelImg from "@/assets/cartel-abandonado.png";
+import nieve1Img from "../assets/nieve1.jpg";
+import nieve2Img from "../assets/nieve2.jpg";
 
 const steps = [
   { icon: FileText, step: "01", title: "Envía foto y matrícula", desc: "Foto del vehículo y número de matrícula por nuestro chat o formulario." },
@@ -56,12 +58,12 @@ const DesguaceSection = () => {
               </p>
               <div className="grid grid-cols-2 gap-4">
                 <img 
-                  src="/nieve1.jpg" 
+                  src={nieve1Img} 
                   alt="Vehículo atrapado en la nieve en Sierra Nevada" 
                   className="rounded-lg shadow-md aspect-video object-cover"
                 />
                 <img 
-                  src="/nieve2.jpg" 
+                  src={nieve2Img} 
                   alt="Asistencia en carretera en condiciones de nieve" 
                   className="rounded-lg shadow-md aspect-video object-cover"
                 />
