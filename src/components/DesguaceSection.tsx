@@ -1,5 +1,5 @@
 import { Leaf, FileText, Truck, ClipboardCheck, Recycle, Euro, Car, Bike } from "lucide-react";
-import cartelImg from "@/assets/cartel-abandonado.png";
+import cartelImg from "@/assets/cartel-abandonado.jpg";
 import nieve1Img from "../assets/nieve1.jpg";
 import nieve2Img from "../assets/nieve2.jpg";
 
