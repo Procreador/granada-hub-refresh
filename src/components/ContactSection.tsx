@@ -57,32 +57,52 @@ const ContactSection = () => {
           </div>
 
           {/* Form */}
-          <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
+          <form 
+            action="https://formsubmit.co/formulario@gruasgirona.com" 
+            method="POST" 
+            className="space-y-4"
+          >
+            {/* Campos ocultos de configuración de FormSubmit */}
+            <input type="hidden" name="_subject" value="Nuevo mensaje de la web - Grúas Girona!" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+
             <input
               type="text"
+              name="Nombre"
+              required
               placeholder="Nombre"
               className="w-full bg-card border border-border rounded-lg px-4 py-3 font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
             />
             <input
               type="tel"
+              name="Telefono"
+              required
               placeholder="Teléfono"
               className="w-full bg-card border border-border rounded-lg px-4 py-3 font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
             />
             <input
               type="email"
+              name="Email"
+              required
               placeholder="Email"
               className="w-full bg-card border border-border rounded-lg px-4 py-3 font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
             />
-            <select className="w-full bg-card border border-border rounded-lg px-4 py-3 font-body text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary">
-              <option>Tipo de vehículo</option>
-              <option>Turismo</option>
-              <option>Motocicleta</option>
-              <option>Furgoneta</option>
-              <option>4x4 / SUV</option>
-              <option>Maquinaria</option>
-              <option>Otro</option>
+            <select 
+              name="Tipo de Vehiculo"
+              className="w-full bg-card border border-border rounded-lg px-4 py-3 font-body text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+            >
+              <option value="No especificado">Tipo de vehículo</option>
+              <option value="Turismo">Turismo</option>
+              <option value="Motocicleta">Motocicleta</option>
+              <option value="Furgoneta">Furgoneta</option>
+              <option value="4x4 / SUV">4x4 / SUV</option>
+              <option value="Maquinaria">Maquinaria</option>
+              <option value="Otro">Otro</option>
             </select>
             <textarea
+              name="Mensaje"
+              required
               placeholder="Mensaje"
               rows={4}
               className="w-full bg-card border border-border rounded-lg px-4 py-3 font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary resize-none"
