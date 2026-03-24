@@ -48,6 +48,25 @@ const DesguaceSection = () => {
             <p className="font-body text-muted-foreground leading-relaxed mb-6">
               ¿Tienes un vehículo viejo, abandonado o fuera de uso? Nos encargamos de todo: recogemos el vehículo, tramitamos la descontaminación y la baja definitiva en la DGT, y te hacemos llegar la baja en <strong className="text-foreground">PDF directamente a tu número de móvil</strong>.
             </p>
+            
+            <div className="mt-8 pt-8 border-t border-border">
+              <h4 className="font-display text-2xl text-foreground mb-4">Rescate en Sierra Nevada</h4>
+              <p className="font-body text-lg text-muted-foreground leading-relaxed mb-6">
+                Cubrimos también toda la zona de Sierra Nevada para la asistencia y rescate de vehículos averiados o atrapados por la nieve y el hielo. Contamos con el equipamiento y la experiencia necesarios para actuar en condiciones adversas de alta montaña.
+              </p>
+              <div className="grid grid-cols-2 gap-4">
+                <img 
+                  src="/nieve1.jpg" 
+                  alt="Vehículo atrapado en la nieve en Sierra Nevada" 
+                  className="rounded-lg shadow-md aspect-video object-cover"
+                />
+                <img 
+                  src="/nieve2.jpg" 
+                  alt="Asistencia en carretera en condiciones de nieve" 
+                  className="rounded-lg shadow-md aspect-video object-cover"
+                />
+              </div>
+            </div>
 
             {/* Vehicle types */}
             <div className="bg-card rounded-xl p-5 border border-border mb-6">
