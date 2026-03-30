@@ -31,12 +31,6 @@ const DesguaceSection = () => {
               className="w-full h-auto"
               loading="lazy"
             />
-            <div className="absolute top-4 left-4">
-              <div className="gradient-eco px-4 py-2 rounded-full flex items-center gap-2">
-                <Leaf className="w-4 h-4 text-eco-foreground" />
-                <span className="font-body font-semibold text-sm text-eco-foreground">Compromiso medioambiental</span>
-              </div>
-            </div>
           </div>
 
           {/* Right - Content */}
