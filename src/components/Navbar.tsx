@@ -4,7 +4,16 @@ import { Phone, Menu, X } from "lucide-react";
 const NAV_LINKS = [
   { label: "Inicio", href: "#inicio" },
   { label: "Servicios", href: "#servicios" },
-  { label: "Desguace", href: "#desguace" },
+  { 
+    label: (
+      <div className="flex flex-col items-center leading-[1.1] py-1">
+        <span className="text-[10px] sm:text-xs">RECOGIDA Y</span>
+        <span className="text-[10px] sm:text-xs font-bold">BAJA EN LA DGT</span>
+        <span className="text-[10px] sm:text-xs text-red-600 font-extrabold tracking-normal">SIN COSTE</span>
+      </div>
+    ), 
+    href: "#desguace" 
+  },
   { label: "Nosotros", href: "#nosotros" },
   { label: "Contacto", href: "#contacto" },
 ];
@@ -21,11 +30,13 @@ const Navbar = () => {
 
         {/* Desktop */}
         <div className="hidden md:flex items-center gap-8">
-          {NAV_LINKS.map((link) => (
+          {NAV_LINKS.map((link, index) => (
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-body font-medium tracking-widest uppercase text-muted-foreground hover:text-primary transition-colors"
+              className={`font-body font-medium tracking-widest uppercase transition-colors ${
+                index === 2 ? "" : "text-sm text-muted-foreground hover:text-primary"
+              }`}
             >
               {link.label}
             </a>
@@ -48,12 +59,14 @@ const Navbar = () => {
       {/* Mobile menu */}
       {open && (
         <div className="md:hidden bg-background border-t border-border px-4 pb-4 space-y-3">
-          {NAV_LINKS.map((link) => (
+          {NAV_LINKS.map((link, index) => (
             <a
               key={link.href}
               href={link.href}
               onClick={() => setOpen(false)}
-              className="block text-sm font-body font-medium tracking-widest uppercase text-muted-foreground hover:text-primary py-2"
+              className={`block font-body font-medium tracking-widest uppercase transition-colors py-2 ${
+                index === 2 ? "" : "text-sm text-muted-foreground hover:text-primary"
+              }`}
             >
               {link.label}
             </a>
