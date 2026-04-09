@@ -1,4 +1,4 @@
-import { Leaf, FileText, Truck, ClipboardCheck, Recycle, Euro, Car, Bike } from "lucide-react";
+import { Leaf, FileText, Truck, ClipboardCheck, Recycle, Euro, Car, Bike, Phone } from "lucide-react";
 import cartelImg from "@/assets/Cartel.png";
 import nieve1Img from "../assets/nieve1.jpg";
 import nieve2Img from "../assets/nieve2.jpg";
@@ -6,8 +6,8 @@ import nieve2Img from "../assets/nieve2.jpg";
 const steps = [
   { icon: FileText, step: "01", title: "Envía foto y matrícula", desc: "Foto del vehículo y número de matrícula por nuestro chat o formulario." },
   { icon: ClipboardCheck, step: "02", title: "Gestión documental", desc: "Tramitamos la descontaminación y baja definitiva en la DGT. Recibirás la baja en PDF en tu móvil." },
-  { icon: Truck, step: "03", title: "Recogida gratuita", desc: "Programamos la grúa para recoger el vehículo en la dirección indicada." },
-  { icon: Recycle, step: "04", title: "Traslado al CAT", desc: "El vehículo se traslada al Centro Autorizado de Tratamiento para su descontaminación." },
+  { icon: FileText, step: "03", title: "Baja Definitiva", desc: "TRAMITAMOS LA DESCONTAMINACION Y BAJA DEFINITIVA Únicamente" },
+  { icon: Phone, step: "04", title: "Contacto y Gestión", desc: "Tlf: 958560130 ó 627238136 CONTACTO DIRECTO DE 8 A 21H TRAMITACIÓN BAJA DEFINITIVA SOLO CON DNI, ADEMÁS DE GESTIONAR EMBARGOS, HERENCIAS SIN COSTE ALGUNO. NO GASTE EL DINERO EN NOTARIOS O GESTIÓN...." },
 ];
 
 const vehicleTypes = [
